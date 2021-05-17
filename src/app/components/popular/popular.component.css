@@ -1,0 +1,70 @@
+.popular-container{
+    widows: 100%;
+    background-color: black;
+    padding: 40px 16px 0px 16px;
+}
+
+.popular-container > h2{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.popular-container > .popular-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2px
+}
+
+.popular-container > .popular-list > app-movie{
+    width: 163px;
+    height: 328px;
+        
+}
+
+
+/* .popular-container > .popular-list > div:nth-child(1){
+    background-image: url('../../../assets/img/marseile.png');
+    background-size: cover;
+        
+}
+
+.popular-container > .popular-list > div:nth-child(2){
+    background-image: url('../../../assets/img/stranger-things.png');
+    background-size: cover;
+        
+}
+
+.popular-container > .popular-list > div:nth-child(3){
+    background-image: url('../../../assets/img/secret-city.png');
+    background-size: cover;
+        
+}
+
+.popular-container > .popular-list > div:nth-child(4){
+    background-image: url('../../../assets/img/cuba_libre.png');
+    background-size: cover;
+        
+} */
+
+
+@media only screen and (min-width: 768px){
+
+    .popular-container{
+        padding: 40px 0px;
+    }
+
+    .popular-container > .popular-list > app-movie{
+        width: 255px;
+        height: 510px;
+            
+    }
+    .popular-container > .popular-list{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+}

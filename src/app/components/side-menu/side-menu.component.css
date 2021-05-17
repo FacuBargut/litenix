@@ -1,0 +1,173 @@
+html,body,*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 3;
+}
+
+.mostrarCapa{
+    display: block;
+}
+
+.container-side-menu{
+    display: flex;
+    position: fixed;
+    width: 228px;
+    height: 100%;
+    background-color: black;
+    z-index: 4;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px;
+    left: 100%;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    opacity: 0;
+}
+
+
+
+.mostrarMenu{
+    opacity: 1;
+    left: 0;
+}
+
+div.container-side-menu > .user-info{
+    width: 193px;
+    border-radius: 193px;
+    margin-top:57px;
+    color: white;
+    background-color: #222222;
+    display: flex;
+    padding: 8px;
+}
+
+div.container-side-menu > div.user-info > div.user-info--icon{
+    width: 25px;
+    height: 25px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-color: #ce00ff;
+    background-position: center;
+    border-radius: 20px;
+    background-image: url('../../../assets/icons/user-icon.png');
+   
+}
+
+div.container-side-menu > div.user-info > p.user-info--name{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+
+div.user-options, div.liteflix-options{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+div.user-options > ul > li{
+    padding: 10px 0px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    border-bottom: 1px solid #222222;
+    list-style: none;
+}
+
+div.liteflix-options > ul{
+    list-style: none;
+}
+
+div.liteflix-options > ul > li{
+    padding: 10px 0px;
+    font-size: 14px;
+    color: white;
+}
+
+div.liteflix-options > ul > li:nth-child(1) > div.icon-bell{
+    background-image: url('../../../assets/icons/bell.png');
+    position: relative;
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 0px;
+    vertical-align: -3px;
+}
+
+div.liteflix-options > ul > li:nth-child(1) > div.icon-bell > span.red-point{
+    background-color: #ff0000;
+    top: 3px;
+    right: 0;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 20px;
+}
+
+div.add-movie-container{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+div.add-movie-container > button{
+    width: 193px;
+    border-radius: 20px;
+    background-color: #ff0000;
+    border: none;
+    font-size: 14px;
+    color: white;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    padding: 12px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: 'Montserrat';
+}
+
+div.add-movie-container > button >span.icon-plus{
+    width: 13px;
+    height: 13px;
+    background-image: url('../../../assets/icons/plus.png');
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    vertical-align: -2px;
+}
+
+div.log-out-container{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+div.log-out-container > button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+
+
+

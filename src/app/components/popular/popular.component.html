@@ -1,0 +1,16 @@
+<div class="popular-container">
+    <h2>POPULARES DE LITEFLIX</h2>
+
+    <div class="popular-list">
+        <app-movie
+                 *ngFor="let popularMovie of popularMovies | slice:0:4;"
+                 [movie] = "popularMovie"
+                 >
+        </app-movie>
+<!-- 
+        <div class="popular"></div>
+        <div class="popular"></div>
+        <div class="popular"></div>
+        <div class="popular"></div> -->
+    </div>
+</div>

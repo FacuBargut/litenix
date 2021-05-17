@@ -1,0 +1,437 @@
+html, *, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header--background-image{
+    width: 100%;
+    height: 545px;
+    position: absolute;
+    top: 0;  
+    left: 0;  
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 77%, #000000),url('../../assets/img/header-background.png.png');
+    z-index: -1;
+}
+
+
+nav{
+    display : flex;
+    justify-content : space-between;
+    align-content   : center;
+    padding: 15px 12px;
+    
+}
+
+.align-elements-left{
+    justify-content: start;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}   
+
+.logo{
+    width: 95px;
+    height: 27px;
+    border: solid 1px var(--white);
+    background-image: url('../../assets/logo/logo.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 6;
+}
+
+.liteflix-options{
+    display: flex;
+    flex-direction: row;
+}
+
+.liteflix-options > ul{
+    list-style: none;
+    display: none;
+    
+    margin-left: 15px;
+    align-items: center;
+}
+
+.liteflix-options > ul > li{
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    margin-right: 18px;
+}
+
+.liteflix-options > ul > li:nth-child(1){
+    font-weight: bold;
+}
+
+
+.liteflix-options > button{
+    display: none;
+    border: none;
+    background-color: #ff0000;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+
+.liteflix-options > button:hover{
+    width: 183px;
+}
+
+.liteflix-options > button:hover > p{
+    opacity: 1;
+}
+
+.liteflix-options > button > div{
+    background: url('../../assets/icons/plus.png');
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.liteflix-options > button > p{
+    color: white;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    opacity: 0;
+    margin-top: 0px !important;
+}
+
+.right-options{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+.right-options > p{
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    margin-right: 15px;
+}
+
+.right-options > div.icon-bell{
+    width: 14px;
+    height: 16px;
+    background-image: url('../../assets/icons/bell.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.right-options > div.user-info--icon{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #003bff;
+    background-position: center;
+    border-radius: 20px;
+    background-image: url('../../assets/icons/user-icon-desktop.png');
+}
+
+.right-options > div.user-info--icon > div.icon-arrow{
+    width: 25px;
+    height: 25px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border-radius: 20px;
+    background-image: url('../../assets/icons/arrow.png');
+    margin-left: 30px;
+    
+}
+
+
+
+
+
+
+
+
+.container-bars{
+    z-index: 6;
+}
+
+@media only screen and (min-width: 768px) {
+    .container-bars{
+        display: none;
+    }
+    .aux-div{
+        display: none;
+    }
+
+
+
+    .right-options{
+        display: flex;
+        z-index: 2;
+    }
+    .liteflix-options > ul{
+        display: flex;
+        z-index: 2;
+    }
+    .liteflix-options > button{
+        display: flex;
+        z-index: 2;
+        justify-content: center;
+        position: relative;
+    }
+
+    .liteflix-options > button > div{
+        position: absolute;
+        left: 33%;
+    }
+
+    .liteflix-options > button:hover{
+        width: 183px;
+    }
+    
+    .liteflix-options > button:hover > p{
+        opacity: 1;
+    }
+
+    .liteflix-options > button:hover > div{
+        position: static;
+    }
+
+    
+
+    .header-content > div.buttons_content > button.add_list{
+        display: none !important;
+    }
+
+    .header-content{
+        align-items: start !important;
+        z-index: 2;
+    }
+
+    .header--background-image{
+        z-index: 1;
+        height: 760px;
+    }
+
+    .next-movies-list{
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        background-color: transparent !important;
+        z-index: 2;
+        justify-content: space-between !important;
+        
+    }
+
+    .header-container{
+        background: black;
+    }
+
+    .buttons_content{
+        z-index: 2;
+    }
+
+    .header-content >  div.buttons_content > .add-list-desktop{
+        margin-left: 30px !important;
+        display: flex !important;
+    }
+
+    .header-content >  div.buttons_content{
+        width: auto;
+        display: flex;
+    }
+    
+    .container-description{
+        
+        display: block !important;
+    }
+
+
+    .next-movies-list > app-movie{
+        width: 255px !important;
+        height: 155px !important;
+        margin-bottom: 0px !important;
+    }
+    .next-movies-list > app-movie:hover{
+        background-color: black !important;
+    }
+
+}
+
+.container-bars-margin{
+    margin-right: 10px;
+}
+
+/* Hamburguer button */
+.bar1, .bar2, .bar3 {
+    width: 21px;
+    height: 1px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-7px, 3px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-7px, -3px);
+  }
+
+
+
+/* Header-content */
+.header-content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 175px;
+}
+
+.header-content > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.header-content > h1{
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
+}
+
+.header-content >  div.buttons_content > button.play, .header-content >  div.buttons_content > .add-list-desktop{
+    font-family: 'Montserrat', sans-serif;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: #00000073;
+    display: flex;
+    justify-content: start;
+    color: white;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.header-content >  div.buttons_content > .add-list-desktop{
+    display: none;
+}
+
+
+.buttons_content{
+    position: relative;
+    width: 100%;
+}
+
+.container-description{
+    z-index: 2;
+    width: 537px;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    display: none;
+}
+
+.container-description > p:nth-child(1){
+    font-weight: bold;
+}
+
+
+
+button.play > img, button > p{
+    margin-top: 10px;
+}
+button.play > img{
+    margin-left: 12px;
+    margin-right: 6px;
+}
+
+button.add-list-desktop > img{
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.header-content > div.buttons_content > button.add_list{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/icons/add-list.png');
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+.header-footer{
+    margin-top: 25px;
+    color: white;
+    padding: 15px 12px;
+}
+
+.header-footer > h2{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 2;
+}
+
+
+/* Lista de proximamente */
+.next-movies-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.next-movies-list > app-movie{
+    width: 330px;
+    height: 201px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+/* .next-movies-list > div.movie:nth-child(1){
+    background-image: url('../../assets/img/crown.png');
+}
+
+.next-movies-list > div.movie:nth-child(2){
+    background-image: url('../../assets/img/house-cards.png.png');
+}
+
+.next-movies-list > div.movie:nth-child(3){
+    background-image: url('../../assets/img/susurra.png');
+}
+
+.next-movies-list > div.movie:nth-child(4){
+    background-image: url('../../assets/img/dirty-money.png');
+} */
+
+
+

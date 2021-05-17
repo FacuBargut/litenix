@@ -1,0 +1,75 @@
+<div class="header-container" >
+<header>
+
+    <app-side-menu #sidenav></app-side-menu>
+
+    <nav id="header-navbar">
+        <div id="container-bars" class="container-bars" (click)="sidenavToggle()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+
+        <div class="liteflix-options">
+            <div class="logo"></div>
+            <ul>
+                <li>Inicio</li>
+                <li>Series</li>
+                <li>Peliculas</li>
+                <li>Agregados recientemente</li>
+                <li>Mi lista</li>
+            </ul>
+            <button (click)="openDialog()">
+                <div class="icon-plus"></div>
+                <p>Agregar película</p>
+            </button>
+        </div>
+
+        <div class="right-options">
+            <p>Niños</p>
+            <div class="icon-bell"></div>
+            <div class="user-info--icon">
+                <div class="icon-arrow"></div>
+            </div>
+        </div>
+
+        <div class="aux-div" style="width: 20px;"></div>
+    </nav>
+
+
+    <div class="header-content">
+        <h2>ORIGINAL DE LITEFLIX</h2>
+        <h1>Kids at school</h1>
+        <div class="buttons_content">
+            <button class="play"> <img src="../../assets/icons/play.png" alt="">  <p>Reproducir</p> </button>
+            <button class="add-list-desktop"> <img src="../../assets/icons/plus.png" alt="">  <p>Mi Lista</p> </button>
+            <button class="add_list"></button>
+        </div>
+
+        <div class="container-description">
+            <p class="container-description--temporada">Ver temporada 1</p>
+            <p class="contianer-description--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatem tempore omnis rerum et earum dolorum quisquam quae blanditiis! In aspernatur atque officia expedita? Mollitia sit perspiciatis excepturi nostrum reiciendis.</p>
+        </div>
+
+
+    </div>
+    <div class="header-footer">
+        <h2>Próximamente</h2>
+    </div>
+
+
+    <div class="next-movies-list">
+            <app-movie
+                    *ngFor="let upcomingMovie of upcomingMovies | slice:0:4;"
+                    [movie] = "upcomingMovie"
+            >
+            </app-movie>
+
+    </div>
+    <div class="header--background-image"></div>
+</header>
+</div>
+
+
+  
